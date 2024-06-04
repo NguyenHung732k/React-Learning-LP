@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header/Header.jsx'
+import Hero from './components/Hero/Hero.jsx'
+import AboutUs from './components/About Us/AboutUs.jsx'
+import PopularFoods from './components/Popular Foods/PopularFoods.jsx'
+import Trending from './components/Trending/Trending.jsx'
+import Subcription from './components/Subscription/Subcription.jsx'
+import Footer from './components/Footer/Footer.jsx'
+
+import './App.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <Hero />
+      <AboutUs />
+      <PopularFoods />
+      <Trending />
+      <Subcription />
+      <Footer />
     </div>
   );
 }
