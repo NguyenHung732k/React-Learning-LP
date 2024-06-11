@@ -36,7 +36,9 @@ const PopularFoods = () => {
                     sx={PopularFoodsStyles.typography.h2}
                     variants={PopularFoodsStyles.textVariants}
                     initial="offscreen"
-                    whileInView="onscreen">
+                    whileInView="onscreen"
+                    transition={{ duration: 0.5 }}
+                    >
 
                     Popular Food / 人気
 
@@ -48,6 +50,7 @@ const PopularFoods = () => {
                     variants={PopularFoodsStyles.filterVariants}
                     initial="offscreen"
                     whileInView="onscreen"
+                    transition={{ duration: 0.75 }}
                 >
                     <Button sx={PopularFoodsStyles.button} >All</Button>
                     <Button sx={PopularFoodsStyles.button} >
@@ -75,6 +78,7 @@ const PopularFoods = () => {
                     variants={PopularFoodsStyles.filterVariants}
                     initial="offscreen"
                     whileInView="onscreen"
+                    transition={{ duration: 0.75 }}
                 >
                     {/* Card 1 */}
                     <Stack direction="column" justifyContent="center" alignItems="center" sx={PopularFoodsStyles.card}>

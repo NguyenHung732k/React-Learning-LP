@@ -41,6 +41,7 @@ const Trending = () => {
                         variants={TrendingStyles.sushiVariants}
                         initial="offscreen"
                         whileInView="onscreen"
+                        transition={{ duration: 0.5 }}
                     >
                         <Typography variant="body2" component="p" sx={TrendingStyles.typography.subtitle}> What's Trending / トレンド </Typography>
 
@@ -76,6 +77,7 @@ const Trending = () => {
                             variants={TrendingStyles.imageSushiVariants}
                             initial="offscreen"
                             whileInView="onscreen"
+                            transition={{ duration: 0.5 }}
                         />
 
                         {/* Arrow Left */}
@@ -99,6 +101,7 @@ const Trending = () => {
                     variants={TrendingStyles.discoverVariants}
                     initial="offscreen"
                     whileInView="onscreen"
+                    transition={{ duration: 0.5 }}
                 >
 
                     <Typography sx={TrendingStyles.typography.discover}>
@@ -119,6 +122,7 @@ const Trending = () => {
                             variants={TrendingStyles.imageDrinkVariants}
                             initial="offscreen"
                             whileInView="onscreen"
+                            transition={{ duration: 0.5 }}
                         />
 
                         {/* Arrow Left */}
@@ -140,6 +144,7 @@ const Trending = () => {
                         variants={TrendingStyles.drinkVariants}
                         initial="offscreen"
                         whileInView="onscreen"
+                        transition={{ duration: 0.5 }}
                     >
                         <Typography variant="body2" component="p" sx={TrendingStyles.typography.subtitle}> What's Trending / トレンド </Typography>
 

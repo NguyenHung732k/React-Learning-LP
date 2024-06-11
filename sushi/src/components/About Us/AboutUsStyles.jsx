@@ -202,7 +202,7 @@ const AboutUsStyles = createTheme({
             fontWeight: 600,
             fontFamily: 'var(--playfair-display)',
             color: 'var(--secondary-color)',
-            marginTop: 16,
+            marginTop: 8,
         },
 
         body1: {

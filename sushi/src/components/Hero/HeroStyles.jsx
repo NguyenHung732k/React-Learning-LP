@@ -56,6 +56,7 @@ const HeroStyles = createTheme({
 
     info: {
         padding: "64px",
+        margin: "100px 0",
 
         [theme.breakpoints.down('lg')]: {
             margin: "30px 0",
@@ -145,12 +146,38 @@ const HeroStyles = createTheme({
         minWidth: '212px',
         outline: 'none',
         border: 'none',
-        backgroundColor: 'var(--secondary-color)',
+        backgroundColor: 'var(--color-white)',
         cursor: 'pointer',
-        color: '#fff',
+        color: '#000',
         fontWeigth: 500,
         fontSize: 18,
         lineHeight: '23px',
+
+        "&:hover": {
+            backgroundColor: 'var(--primary-color)',
+        },
+    },
+
+    heroVariants: {
+        offscreen: {
+            opacity: 0,
+        },
+
+        onscreen: {
+            opacity: 1
+        },
+    },
+
+    heroTextVariants: {
+        offscreen: {
+            transform: "translateX(200px)",
+            opacity: 0,
+        },
+
+        onscreen: {
+            transform: "none",
+            opacity: 1
+        },
     },
 
     cardVariants: {
@@ -165,8 +192,6 @@ const HeroStyles = createTheme({
             transform: "none",
             opacity: 1
         },
-
-        transition: "all 1s cubic-bezier(.175,.885,.32,1.275) 1s",
     },
 
 })

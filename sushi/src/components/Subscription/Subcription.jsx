@@ -26,7 +26,9 @@ const Subcription = () => {
           sx={SubcriptionStyles.typography.h2}
           variants={SubcriptionStyles.titleVariants}
           initial="offscreen"
-          whileInView="onscreen">
+          whileInView="onscreen"
+          transition={{ duration: 0.75 }}
+          >
 
           Get offers stright <br /> to your inbox
 
@@ -38,7 +40,9 @@ const Subcription = () => {
           sx={SubcriptionStyles.typography.p}
           variants={SubcriptionStyles.textVariants}
           initial="offscreen"
-          whileInView="onscreen">
+          whileInView="onscreen"
+          transition={{ duration: 0.75 }}
+          >
 
           Sign up for the Sushiman newsletter
 
@@ -50,6 +54,7 @@ const Subcription = () => {
           variants={SubcriptionStyles.formVariants}
           initial="offscreen"
           whileInView="onscreen"
+          transition={{ duration: 0.75 }}
         >
           <Input placeholder="Enter your email address" disableUnderline sx={SubcriptionStyles.input} />
           <Button sx={SubcriptionStyles.button}> Get Started </Button>

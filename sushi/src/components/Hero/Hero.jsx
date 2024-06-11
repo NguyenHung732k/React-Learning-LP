@@ -23,11 +23,16 @@ const Hero = () => {
             {/* Hero Image */}
             <Box component="section" sx={HeroStyles.hero}>
                 <Stack flex="1" direction="column" position="relative" zIndex={5} sx={HeroStyles.heroImage}>
-                    <Fade in={true} mountOnEnter unmountOnExit timeout={2000}>
+                    <Stack component={motion.div} ref={ref} variants={HeroStyles.heroVariants} initial="offscreen" whileInView="onscreen" transition={{ duration: 1 }}>
                         <Stack>
-                            <Box component="img"
+                            <Box component={motion.img}
+                                ref={ref}
                                 alt="sushi"
                                 src={image1}
+                                variants={HeroStyles.heroVariants} 
+                                initial="offscreen" 
+                                whileInView="onscreen"
+                                transition={{ duration: 1 }}
                             />
                             <Typography variant="h2" component="h2" sx={HeroStyles.typography.h2}>
                                 日 <br />
@@ -35,14 +40,14 @@ const Hero = () => {
                                 食
                             </Typography>
                         </Stack>
-                    </Fade>
+                    </Stack>
                     <Stack component="div" position='absolute' sx={HeroStyles.overlay} elevation={0}></Stack>
                 </Stack>
 
 
                 {/* Hero Content */}
                 <Stack flex="1.22" direction="column" justifyContent="space-between">
-                    <Slide direction="left" in={true} mountOnEnter timeout={1000}>
+                    <Stack component={motion.div} ref={ref} variants={HeroStyles.heroTextVariants} initial="offscreen" whileInView="onscreen" transition={{ duration: 0.75 }}>
                         <Stack flex="1" direction="column" justifyContent="center" sx={HeroStyles.info}>
                             <Typography variant="h1" component="h1" sx={HeroStyles.typography.h1}>
                                 Feel the taste of Japanese food
@@ -59,7 +64,7 @@ const Hero = () => {
 
                             </Stack>
                         </Stack>
-                    </Slide>
+                    </Stack>
 
                     {/* Hero Content Testimonials */}
                     <Stack component={motion.div}
@@ -68,6 +73,7 @@ const Hero = () => {
                         variants={HeroStyles.cardVariants}
                         initial="offscreen"
                         whileInView="onscreen"
+                        transition={{ duration: 0.75 }}
 
                         sx={{ backgroundColor: '#fff' }}
                     >

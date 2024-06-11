@@ -15,18 +15,6 @@ const theme = createTheme({
 })
 
 const HeaderStyles = createTheme({
-    // palette: {
-    //     primary: {
-    //         main: '#b1454a',
-    //     },
-    //     secondary: {
-    //         main: '#121212',
-    //     },
-    //     creamson: {
-    //         main: '#fff0de',
-    //     }
-    // },
-
 
     overlay: {
         inset: 0,
@@ -37,16 +25,16 @@ const HeaderStyles = createTheme({
     },
 
     navResponsive: {
-            [theme.breakpoints.down('md')]: {
-                backgroundColor: "var(--primary-color)",
-            }
+        [theme.breakpoints.down('md')]: {
+            backgroundColor: "var(--primary-color)",
+        }
     },
 
     logo: {
         padding: "20px",
 
         [theme.breakpoints.down('md')]: {
-           padding: "16px",
+            padding: "16px",
         }
     },
 
@@ -55,20 +43,24 @@ const HeaderStyles = createTheme({
         flex: '1.236',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'flex-end',
-        gap: '64px',
+        justifyContent: 'flex-start',
 
         '&:hover': {
             backgroundColor: 'transparent',
         },
+
 
         [theme.breakpoints.down('md')]: {
             display: "none",
         }
     },
 
+
     mobileList: {
+        visibility: "hidden",
+
         [theme.breakpoints.down('md')]: {
+            visibility: "visible",
             display: "flex",
             position: 'relative',
             padding: '20px',
@@ -100,7 +92,34 @@ const HeaderStyles = createTheme({
         lineHeight: '20px',
         textTransform: 'uppercase',
         cursor: 'pointer',
-        textAlign: 'right',
+        textAlign: 'center',
+
+    },
+
+    listHover: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+
+        '&:hover': {
+            backgroundColor: 'transparent',
+        },
+
+        '&:focus-visible': {
+            backgroundColor: 'transparent',
+        }
+    },
+
+    headerVariants: {
+        offscreen: {
+            transform: "translateY(-200px)",
+            opacity: 0,
+        },
+
+        onscreen: {
+            transform: "none",
+            opacity: 1
+        },
     }
 })
 

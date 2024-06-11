@@ -10,7 +10,7 @@ import './App.css'
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
       <Hero />
       <AboutUs />
@@ -18,7 +18,7 @@ function App() {
       <Trending />
       <Subcription />
       <Footer />
-    </div>
+    </>
   );
 }
 

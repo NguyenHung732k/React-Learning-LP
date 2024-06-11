@@ -35,6 +35,7 @@ const AboutUs = () => {
                                 variants={AboutUsStyles.cardVariants}
                                 initial="offscreen"
                                 whileInView="onscreen"
+                                transition={{ duration: 1 }}
                             />
                         </Stack>
                     </Stack>
@@ -51,6 +52,7 @@ const AboutUs = () => {
                                 variants={AboutUsStyles.cardVariants}
                                 initial="offscreen"
                                 whileInView="onscreen"
+                                transition={{ duration: 1 }}
                             />
                         </Stack>
                     </Stack>
@@ -62,7 +64,10 @@ const AboutUs = () => {
                     ref={ref}
                     variants={AboutUsStyles.textVariants}
                     initial="offscreen"
-                    whileInView="onscreen">
+                    whileInView="onscreen"
+                    transition={{ duration: 1 }}
+                    >
+                    
 
                     <Typography variant="body1" component="p" paddingLeft="30px" sx={AboutUsStyles.typography.body1}>
                         About Us / 私たちに関しては
